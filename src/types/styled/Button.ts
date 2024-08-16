@@ -5,4 +5,5 @@ export type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'danger';
   disabled?: boolean;
   className?: string;
+  icon?: React.ReactNode;
 }

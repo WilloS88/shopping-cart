@@ -1,27 +1,19 @@
 import { v4 as uuidv4 } from 'uuid';
+import type { Product } from '../types/Product';
 
-import ak47 from "../assets/ak47.jpg";
-import colt1911 from '../assets/colt1911.jpg';
-import coltRevolver from '../assets/coltRevolver.jpg';
-import desertEagle from '../assets/desertEagle.jpg';
-import glock19 from '../assets/glock19.jpg';
-import m4a1 from '../assets/m4a1.jpg';
-import mp5 from '../assets/mp5.jpg';
-import mp7 from '../assets/mp7.jpg';
-import mp9 from '../assets/mp9.jpg';
-import scorpion from '../assets/scorpion.jpg';
-import scorpionEvo from '../assets/scorpionEvo.jpg';
-import usp from '../assets/usp.jpg';
+import ak47 from "../assets/products/ak47.jpg";
+import colt1911 from '../assets/products/colt1911.jpg';
+import coltRevolver from '../assets/products/coltRevolver.jpg';
+import desertEagle from '../assets/products/desertEagle.jpg';
+import glock19 from '../assets/products/glock19.jpg';
+import m4a1 from '../assets/products/m4a1.jpg';
+import mp5 from '../assets/products/mp5.jpg';
+import mp7 from '../assets/products/mp7.jpg';
+import mp9 from '../assets/products/mp9.jpg';
+import scorpion from '../assets/products/scorpion.jpg';
+import scorpionEvo from '../assets/products/scorpionEvo.jpg';
+import usp from '../assets/products/usp.jpg';
 
-export type Product = {
-  id: string;
-  name: string;
-  price: number;
-  image: string;
-  description: string;
-  type: 'Pistol' | 'Assault Rifle' | 'Submachine Gun';
-  caliber: string;
-}
 
 export const products: Product[] = [
   {
