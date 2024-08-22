@@ -4,6 +4,7 @@ import { NotFoundPage } from "./components/pages/NotFoundPage";
 import { HomePage } from "./components/pages/HomePage";
 import { ProductsPage } from "./components/pages/ProductsPage";
 import { AboutUsPage } from "./components/pages/AboutUsPage";
+import { SingleProductPage } from "./components/pages/SingleProductPage";
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,8 @@ const router = createBrowserRouter([
         element: <ProductsPage />,
       },
       {
-        path: "/product/:id",
-        element: <ProductsPage />,
+        path: "/products/:id",
+        element: <SingleProductPage />,
       },
       {
         path: "/aboutus",
