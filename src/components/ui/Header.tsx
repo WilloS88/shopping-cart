@@ -34,7 +34,7 @@ export const Header = () => {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12 text-3xl font-mono font-semibold">
+        <Popover.Group className="hidden lg:flex lg:gap-x-12 text-4xl font-mono font-semibold">
           WilloS Blackmarket
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-8">

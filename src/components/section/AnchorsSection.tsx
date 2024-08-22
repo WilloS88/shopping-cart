@@ -20,7 +20,7 @@ export const AnchorsSection = () => {
       <Link to="/products" className="inline-block">
         <Button
           type="button"
-          label="Go to Products"
+          label="Products"
           className="primary"
           icon={<ScrollText />}
         />

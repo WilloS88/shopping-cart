@@ -4,6 +4,12 @@ export type Product = {
   price: number;
   image: string;
   description: string;
-  type: 'Pistol' | 'Assault Rifle' | 'Submachine Gun';
+  type: GunType;
   caliber: string;
+}
+
+export enum GunType {
+  Pistol = "Pistol",
+  AssaultRifle = "Assault Rifle",
+  SubmachineGun = "Submachine Gun"
 }
