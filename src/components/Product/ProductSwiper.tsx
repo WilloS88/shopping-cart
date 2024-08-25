@@ -1,7 +1,7 @@
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { products } from "../../data/products";
-import { ProductCard } from "../product/ProductCard";
+import { ProductCard } from "./ProductCard";
 
 const ProductSwiper: React.FC = () => {
   return (

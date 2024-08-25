@@ -24,7 +24,7 @@ export const Button = ({
       disabled={disabled}
       className={`${baseStyles} ${variantStyles[variant]} ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}
     >
-      {icon && <span className="mr-2">{icon}</span>} {/* Render icon if provided */}
+      {icon && <span className="mr-2">{icon}</span>}
       {label}
     </button>
   );

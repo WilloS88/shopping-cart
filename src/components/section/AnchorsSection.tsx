@@ -8,7 +8,7 @@ import { PersonStanding } from "lucide-react";
 
 export const AnchorsSection = () => {
   return (
-    <div className="flex justify-center gap-5">
+    <div className="hidden lg:flex justify-center gap-5">
       <Link to="/" className="inline-block">
         <Button
           type="button"
