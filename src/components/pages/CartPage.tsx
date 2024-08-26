@@ -1,4 +1,4 @@
-import { useCart } from "../CartContext";
+import { useCart } from "../hooks/useCart";
 import { Button } from "../ui/Button";
 
 export const CartPage = () => {

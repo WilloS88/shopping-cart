@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { products } from "../../data/products";
 import { Button } from "../ui/Button";
 import { CornerUpLeft, ShoppingBasket, DollarSign, Check } from "lucide-react";
-import { useCart } from "../CartContext";
+import { useCart } from "../hooks/useCart";
 
 export const SingleProductPage = () => {
   const [productAdded, setProductAdded] = useState(false);

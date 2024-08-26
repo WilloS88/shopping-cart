@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Button } from "../ui/Button";
 import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useCart } from "../CartContext";
+import { useCart } from "../hooks/useCart";
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
