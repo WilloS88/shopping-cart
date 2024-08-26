@@ -1,32 +1,12 @@
-import { useState } from "react";
+import { useCart } from "../CartContext";
 import { Button } from "../ui/Button";
 
-type CartItem = {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  image: string;
-};
-
 export const CartPage = () => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    {
-      id: "1",
-      name: "Sample Product",
-      price: 100,
-      quantity: 1,
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: "2",
-      name: "Sample Product",
-      price: 250,
-      quantity: 1,
-      image: "https://via.placeholder.com/150",
-    },
-    
-  ]);
+  const { cartItems, setCartItems } = useCart();
+
+  const handleRemoveItem = (id: string) => {
+    setCartItems(cartItems.filter((item) => item.id !== id));
+  };
 
   const handleQuantityChange = (id: string, quantity: number) => {
     setCartItems((items) =>
@@ -36,19 +16,15 @@ export const CartPage = () => {
     );
   };
 
-  const handleRemoveItem = (id: string) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
-  };
-
-  const handleCheckout = () => {
-    alert("Proceeding to checkout...");
-  };
-
   const calculateTotalPrice = () => {
     return cartItems.reduce(
       (total, item) => total + item.price * item.quantity,
       0
     );
+  };
+
+  const handleCheckout = () => {
+    alert("Proceeding to checkout...");
   };
 
   return (
@@ -72,7 +48,7 @@ export const CartPage = () => {
                 <h2 className="text-lg font-semibold">{item.name}</h2>
                 <p className="text-gray-600">${item.price} each</p>
                 <div className="flex items-center">
-                  <span className="mr-2">Quantity:</span>
+                  <span className="mr-2">Quantity</span>
                   <input
                     type="number"
                     value={item.quantity}
