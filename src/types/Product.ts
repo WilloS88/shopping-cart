@@ -6,6 +6,7 @@ export type Product = {
   description: string;
   type: GunType;
   caliber: string;
+  quantity: number; 
 }
 
 export enum GunType {

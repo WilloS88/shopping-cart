@@ -23,7 +23,8 @@ export const products: Product[] = [
     image: ak47,
     description: 'A reliable and durable assault rifle known for its power and widespread use.',
     type: GunType.AssaultRifle,
-    caliber: '7.62x39mm',  
+    caliber: '7.62x39mm',
+    quantity: 1,  
   },
   {
     id: uuidv4(),
@@ -32,7 +33,8 @@ export const products: Product[] = [
     image: colt1911,
     description: 'A classic semi-automatic pistol with a powerful .45 ACP round.',
     type: GunType.Pistol,
-    caliber: '.45 ACP',  
+    caliber: '.45 ACP',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -41,7 +43,8 @@ export const products: Product[] = [
     image: coltRevolver,
     description: 'A timeless revolver known for its reliability and classic design.',
     type: GunType.Pistol,
-    caliber: '.357 Magnum',  
+    caliber: '.357 Magnum',
+    quantity: 1,  
   },
   {
     id: uuidv4(),
@@ -50,7 +53,8 @@ export const products: Product[] = [
     image: desertEagle,
     description: 'A massive and iconic handgun with an intimidating .50 AE caliber.',
     type: GunType.Pistol,
-    caliber: '.50 AE',  
+    caliber: '.50 AE',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -59,7 +63,8 @@ export const products: Product[] = [
     image: glock19,
     description: 'A versatile and widely used 9mm pistol, perfect for both civilians and law enforcement.',
     type: GunType.Pistol,
-    caliber: '9mm',  
+    caliber: '9mm',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -68,7 +73,8 @@ export const products: Product[] = [
     image: m4a1,
     description: 'A compact and powerful carbine used extensively by military forces worldwide.',
     type: GunType.AssaultRifle,
-    caliber: '5.56×45mm NATO',  
+    caliber: '5.56×45mm NATO',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -77,7 +83,8 @@ export const products: Product[] = [
     image: mp5,
     description: 'A highly regarded submachine gun known for its precision and reliability.',
     type: GunType.SubmachineGun,
-    caliber: '9mm',  
+    caliber: '9mm',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -86,7 +93,8 @@ export const products: Product[] = [
     image: mp7,
     description: 'A modern submachine gun that combines compactness with firepower.',
     type: GunType.SubmachineGun,
-    caliber: '4.6×30mm',  
+    caliber: '4.6×30mm',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -95,7 +103,8 @@ export const products: Product[] = [
     image: mp9,
     description: 'A lightweight and compact submachine gun designed for close-quarters combat.',
     type: GunType.SubmachineGun,
-    caliber: '9mm',  
+    caliber: '9mm',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -104,7 +113,8 @@ export const products: Product[] = [
     image: scorpion,
     description: 'A compact and powerful submachine gun favored for its portability and rapid fire rate.',
     type: GunType.SubmachineGun,
-    caliber: '7.65×17mm',  
+    caliber: '7.65×17mm',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -113,7 +123,8 @@ export const products: Product[] = [
     image: scorpionEvo,
     description: 'An advanced version of the Scorpion with enhanced features and performance.',
     type: GunType.SubmachineGun,
-    caliber: '9mm',  
+    caliber: '9mm',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -122,6 +133,7 @@ export const products: Product[] = [
     image: usp,
     description: 'A highly reliable and accurate pistol popular with both military and police forces.',
     type: GunType.Pistol,
-    caliber: '.45 ACP',  
+    caliber: '.45 ACP',
+    quantity: 1,
   },
 ];

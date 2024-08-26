@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { DollarSign } from "lucide-react";
-import { Product } from "../../data/products";
+import { Product } from "../../types/Product";
 import { Card } from "../ui/Card";
 
 type ProductCardProps = {
