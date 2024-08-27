@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Spinner } from "../ui/Spinner";
-// import { products as staticProducts } from "../../data/products";
-// import { ProductCard } from "../product/ProductCard";
+import { AnimatedGunSection } from "../section/AnimatedGunSection";
 import { SwiperGunSection } from "../section/SwiperGunSection";
 
 import guns1 from "../../assets/swiper/guns/guns1.jpg";
@@ -29,11 +28,13 @@ export const HomePage = () => {
   }
 
   return (
-    <div className="flex flex-wrap justify-center">
-      {/* {products?.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))} */}
+    <div className="ml-10">
+      <div>
+      <AnimatedGunSection/>
+      </div>
+      <div>
       <SwiperGunSection images={images}/>
+      </div>
     </div>
   );
 };

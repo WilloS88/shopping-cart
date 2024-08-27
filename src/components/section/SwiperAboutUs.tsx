@@ -4,13 +4,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules'; 
 
-type SwiperGunSectionProps = {
+type SwiperAboutUsProps = {
   images: string[];
 };
 
-export const SwiperGunSection = ({ images }: SwiperGunSectionProps) => {
+export const SwiperAboutUs = ({ images }: SwiperAboutUsProps) => {
   return (
-    
     <Swiper
       spaceBetween={20}
       slidesPerView={3}

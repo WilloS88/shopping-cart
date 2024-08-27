@@ -102,7 +102,7 @@ export const Header = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="flex flex-col justify-center py-6">
                 <div className="mt-2 min-w-56">
-                  <Link to="/home" className="inline-block">
+                  <Link to="/" className="inline-block" onClick={() => setMobileMenuOpen(false)}>
                     <Button
                       type="button"
                       label="Home"
@@ -111,7 +111,7 @@ export const Header = () => {
                   </Link>
                 </div>
                 <div className="mt-2 min-w-56">
-                  <Link to="/products" className="inline-block">
+                  <Link to="/products" className="inline-block" onClick={() => setMobileMenuOpen(false)}>
                     <Button
                       type="button"
                       label="Products"
@@ -120,12 +120,26 @@ export const Header = () => {
                   </Link>
                 </div>
                 <div className="mt-2">
-                  <Link to="/aboutus" className="inline-block">
+                  <Link to="/aboutus" className="inline-block" onClick={() => setMobileMenuOpen(false)}>
                     <Button
                       type="button"
                       label="About Us"
                       className="primary justify-center w-[100px]"
                     />
+                  </Link>
+                </div>
+                <div className="mt-5">
+                  <Link to="/cart" className="relative" onClick={() => setMobileMenuOpen(false)}>
+                    <img
+                      className="h-[50px] w-[50px]"
+                      src={ShoppingCartIcon}
+                      alt="Cart"
+                    />
+                    {totalQuantity > 0 && (
+                      <span className="absolute -top-2 left-11 bg-gray-800 text-white text-center rounded-full px-1.5 py-0.5 text-xs font-bold">
+                        {totalQuantity}
+                      </span>
+                    )}
                   </Link>
                 </div>
               </div>
