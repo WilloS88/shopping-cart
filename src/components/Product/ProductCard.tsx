@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { DollarSign } from "lucide-react";
 import { Card } from "../ui/Card";
-import type { Product } from "../../types/Product";
+import type { ProductItem } from "../../types/Product";
 
 type ProductCardProps = {
-  product: Product;
+  product: ProductItem;
 };
 
 export const ProductCard = ({ product }: ProductCardProps) => {

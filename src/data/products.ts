@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import type { Product } from '../types/Product';
+import type { ProductItem } from '../types/Product';
 import { GunType } from '../types/Product';
 
 import ak47 from "../assets/products/ak47.jpg";
@@ -15,7 +15,7 @@ import scorpion from '../assets/products/scorpion.jpg';
 import scorpionEvo from '../assets/products/scorpionEvo.jpg';
 import usp from '../assets/products/usp.jpg';
 
-export const products: Product[] = [
+export const products: ProductItem[] = [
   {
     id: uuidv4(),
     name: 'AK-47',

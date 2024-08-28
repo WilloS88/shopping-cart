@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { products } from "../../data/products";
 import { ProductCard } from "./ProductCard";
 
-const ProductSwiper: React.FC = () => {
+const ProductSwiper = () => {
   return (
     <Swiper
       spaceBetween={10}
