@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { products } from "../../data/products";
-import { Button } from "../ui/Button";
+import { products } from "../data/products";
+import { Button } from "../components/ui/Button";
 import { CornerUpLeft, ShoppingBasket, DollarSign, Check } from "lucide-react";
 import { useCart } from "../hooks/useCart";
 

@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Button } from "../ui/Button";
 import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useCart } from "../hooks/useCart";
+import { useCart } from "../../hooks/useCart";
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -102,7 +102,11 @@ export const Header = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="flex flex-col justify-center py-6">
                 <div className="mt-2 min-w-56">
-                  <Link to="/" className="inline-block" onClick={() => setMobileMenuOpen(false)}>
+                  <Link
+                    to="/"
+                    className="inline-block"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     <Button
                       type="button"
                       label="Home"
@@ -111,7 +115,11 @@ export const Header = () => {
                   </Link>
                 </div>
                 <div className="mt-2 min-w-56">
-                  <Link to="/products" className="inline-block" onClick={() => setMobileMenuOpen(false)}>
+                  <Link
+                    to="/products"
+                    className="inline-block"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     <Button
                       type="button"
                       label="Products"
@@ -120,7 +128,11 @@ export const Header = () => {
                   </Link>
                 </div>
                 <div className="mt-2">
-                  <Link to="/aboutus" className="inline-block" onClick={() => setMobileMenuOpen(false)}>
+                  <Link
+                    to="/aboutus"
+                    className="inline-block"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     <Button
                       type="button"
                       label="About Us"
@@ -129,7 +141,11 @@ export const Header = () => {
                   </Link>
                 </div>
                 <div className="mt-5">
-                  <Link to="/cart" className="relative" onClick={() => setMobileMenuOpen(false)}>
+                  <Link
+                    to="/cart"
+                    className="relative"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     <img
                       className="h-[50px] w-[50px]"
                       src={ShoppingCartIcon}

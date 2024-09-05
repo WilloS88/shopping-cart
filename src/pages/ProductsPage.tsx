@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Spinner } from "../ui/Spinner";
-import { products as staticProducts } from "../../data/products";
-import { ProductCard } from "../product/ProductCard";
+import { Spinner } from "../components/ui/Spinner";
+import { products as staticProducts } from "../data/products";
+import { ProductCard } from "../components/product/ProductCard";
 
 export const ProductsPage = () => {
   const [products, setProducts] = useState<typeof staticProducts | null>(null);

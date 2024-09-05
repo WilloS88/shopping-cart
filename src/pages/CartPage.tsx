@@ -1,5 +1,5 @@
 import { useCart } from "../hooks/useCart";
-import { Button } from "../ui/Button";
+import { Button } from "../components/ui/Button";
 
 export const CartPage = () => {
   const { cartItems, setCartItems } = useCart();
