@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { products } from "../data/products";
 import { Button } from "../components/ui/Button";
 import { CornerUpLeft, ShoppingBasket, DollarSign, Check } from "lucide-react";
-import { useCart } from "../hooks/useCart";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../state/cart/cartSlice"; 
 
 export const SingleProductPage = () => {
   const [productAdded, setProductAdded] = useState(false);
   const { id } = useParams<{ id: string }>();
   const product = products.find((p) => p.id === id);
-  const { addToCart } = useCart();
+  const dispatch = useDispatch(); 
 
   if (!product) {
     return (
@@ -22,16 +22,18 @@ export const SingleProductPage = () => {
 
   const handleAddCartClick = () => {
     setProductAdded(true);
-    addToCart({
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      quantity: product.quantity,
-      image: product.image,
-      description: product.description,
-      type: product.type,
-      caliber: product.caliber,
-    });
+    dispatch(
+      addToCart({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        quantity: 1, 
+        image: product.image,
+        description: product.description,
+        type: product.type,
+        caliber: product.caliber,
+      })
+    );
   };
 
   return (
@@ -73,7 +75,7 @@ export const SingleProductPage = () => {
               className="Secondary min-w-36 mb-4"
               icon={<ShoppingBasket />}
             />
-            {productAdded === true && (
+            {productAdded && (
               <div className="flex justify-center text-green-600 text-center m-2 gap-1 font-semibold">
                 Added <Check color="green" />
               </div>

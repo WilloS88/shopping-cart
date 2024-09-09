@@ -7,12 +7,13 @@ import { useState } from "react";
 import { Button } from "../ui/Button";
 import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useCart } from "../../hooks/useCart";
+import { useSelector } from "react-redux";
+import { RootState } from "../../state/store";
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const { cartItems } = useCart();
+  const cartItems = useSelector((state: RootState) => state.cart.cartItems);
   const totalQuantity = cartItems.reduce(
     (total, item) => total + item.quantity,
     0

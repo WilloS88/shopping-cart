@@ -1,24 +1,26 @@
-import { useCart } from "../hooks/useCart";
+// src/components/pages/CartPage.tsx
+import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../components/ui/Button";
+import { RootState } from "../state/store";
+import { removeFromCart, updateQuantity } from "../state/cart/cartSlice";
+
+import type { ProductItem } from "../types/Product";
 
 export const CartPage = () => {
-  const { cartItems, setCartItems } = useCart();
+  const cartItems = useSelector((state: RootState) => state.cart.cartItems);
+  const dispatch = useDispatch();
 
   const handleRemoveItem = (id: string) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
+    dispatch(removeFromCart(id));
   };
 
   const handleQuantityChange = (id: string, quantity: number) => {
-    setCartItems((items) =>
-      items.map((item) =>
-        item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
-      )
-    );
+    dispatch(updateQuantity({ id, quantity: Math.max(1, quantity) }));
   };
 
   const calculateTotalPrice = () => {
     return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
+      (total: number, item: ProductItem) => total + item.price * item.quantity,
       0
     );
   };
@@ -34,7 +36,7 @@ export const CartPage = () => {
         <p>Your cart is empty</p>
       ) : (
         <div className="space-y-4">
-          {cartItems.map((item) => (
+          {cartItems.map((item: ProductItem) => (
             <div
               key={item.id}
               className="flex items-center justify-between border-b pb-4"
