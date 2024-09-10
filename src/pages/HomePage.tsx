@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Spinner } from "../components/ui/Spinner";
+// import { useState, useEffect } from "react";
+// import { Spinner } from "../components/ui/Spinner";
 import { AnimatedGunSection } from "../components/section/AnimatedGunSection";
 import { SwiperGunSection } from "../components/section/SwiperGunSection";
 
@@ -12,20 +12,20 @@ import guns5 from "../assets/swiper/guns/guns5.jpg";
 const images = [guns1, guns2, guns3, guns4, guns5];
 
 export const HomePage = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const loadProducts = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 300));
-      setLoading(false);
-    };
+  // useEffect(() => {
+  //   const loadProducts = async () => {
+  //     await new Promise((resolve) => setTimeout(resolve, 300));
+  //     setLoading(false);
+  //   };
 
-    loadProducts();
-  }, []);
+  //   loadProducts();
+  // }, []);
 
-  if (loading) {
-    return <Spinner />;
-  }
+  // if (loading) {
+  //   return <Spinner />;
+  // }
 
   return (
     <div className="ml-10">

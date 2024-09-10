@@ -73,7 +73,7 @@ export const products: ProductItem[] = [
     image: m4a1,
     description: 'A compact and powerful carbine used extensively by military forces worldwide.',
     type: GunType.AssaultRifle,
-    caliber: '5.56×45mm NATO',
+    caliber: '5.56x45mm NATO',
     quantity: 1,
   },
   {
@@ -93,7 +93,7 @@ export const products: ProductItem[] = [
     image: mp7,
     description: 'A modern submachine gun that combines compactness with firepower.',
     type: GunType.SubmachineGun,
-    caliber: '4.6×30mm',
+    caliber: '4.6x30mm',
     quantity: 1,
   },
   {
@@ -113,7 +113,7 @@ export const products: ProductItem[] = [
     image: scorpion,
     description: 'A compact and powerful submachine gun favored for its portability and rapid fire rate.',
     type: GunType.SubmachineGun,
-    caliber: '7.65×17mm',
+    caliber: '7.65x17mm',
     quantity: 1,
   },
   {

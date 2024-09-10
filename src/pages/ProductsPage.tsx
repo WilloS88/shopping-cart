@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Spinner } from "../components/ui/Spinner";
 import { products as staticProducts } from "../data/products";
 import { ProductCard } from "../components/product/ProductCard";
+import { FilterSection } from "../components/section/FilterSection";
+import { RootState } from "../state/store";
 
 export const ProductsPage = () => {
   const [products, setProducts] = useState<typeof staticProducts | null>(null);
   const [loading, setLoading] = useState(true);
+
+  const { weaponType, caliber } = useSelector(
+    (state: RootState) => state.filter
+  );
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -21,11 +28,26 @@ export const ProductsPage = () => {
     return <Spinner />;
   }
 
+  const filteredProducts = products?.filter((product) => {
+    if (weaponType && product.type !== weaponType) {
+      return false;
+    }
+    if (caliber && product.caliber !== caliber) {
+      return false;
+    }
+    return true;
+  });
+
   return (
-    <div className="flex flex-wrap justify-center">
-      {products?.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+    <div className="flex-col justify-center items-center">
+      <div>
+        <FilterSection />
+      </div>
+      <div className="flex flex-wrap justify-center">
+        {filteredProducts?.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   );
 };
