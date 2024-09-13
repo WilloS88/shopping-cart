@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Spinner } from "../components/ui/Spinner";
 import { products as staticProducts } from "../data/products";
+import { ExpandableSearchBar } from "../components/ui/ExpandableSearchbar";
 import { ProductCard } from "../components/product/ProductCard";
 import { FilterSection } from "../components/section/FilterSection";
 import { RootState } from "../state/store";
@@ -13,6 +14,7 @@ export const ProductsPage = () => {
   const { weaponType, caliber } = useSelector(
     (state: RootState) => state.filter
   );
+  const searchQuery = useSelector((state: RootState) => state.search.query);
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -35,12 +37,19 @@ export const ProductsPage = () => {
     if (caliber && product.caliber !== caliber) {
       return false;
     }
+    if (
+      searchQuery &&
+      !product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    ) {
+      return false;
+    }
     return true;
   });
 
   return (
     <div className="flex-col justify-center items-center">
-      <div>
+      <div className="flex-col justify-center items-center">
+        <ExpandableSearchBar />
         <FilterSection />
       </div>
       <div className="flex flex-wrap justify-center">

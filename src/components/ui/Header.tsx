@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import HeaderIcon from "../../assets/svg/header-icon.svg";
-import SearchIcon from "../../assets/svg/search-icon.svg";
 import ShoppingCartIcon from "../../assets/svg/shopping-cart-icon.svg";
 
 import { useState } from "react";
@@ -55,14 +54,7 @@ export const Header = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-8">
-          {/* Search Icon */}
-          <Link
-            to="/search"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            <img className="h-[25px] w-auto" src={SearchIcon} alt="Search" />
-          </Link>
-
+          
           {/* Cart Icon with Badge */}
           <Link to="/cart" className="relative">
             <img
