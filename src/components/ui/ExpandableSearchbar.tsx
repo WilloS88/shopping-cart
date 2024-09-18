@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../state/store";
-import { setSearchQuery } from "../../state/search/searchSlice"; // Make sure this path is correct
+import { setSearchQuery } from "../../state/search/searchSlice";
 import SearchIcon from "../../assets/svg/search-icon.svg";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -22,7 +22,7 @@ export const ExpandableSearchBar = () => {
 
   const handleCollapse = () => {
     setIsExpanded(false);
-    dispatch(setSearchQuery("")); 
+    dispatch(setSearchQuery(""));
   };
 
   return (

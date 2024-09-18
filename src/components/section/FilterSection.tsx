@@ -23,7 +23,7 @@ export const FilterSection = () => {
         <select
           id="type"
           value={weaponType}
-          className="font-semibold min-w-[150px]"
+          className="font-semibold min-w-[150px] border-black border-2 rounded"
           onChange={handleTypeChange}
         >
           <option value="">All</option>
@@ -37,7 +37,7 @@ export const FilterSection = () => {
         <select
           id="caliber"
           value={caliber}
-          className="font-semibold max-w-[150px]"
+          className="font-semibold max-w-[150px] border-black border-2 rounded"
           onChange={handleCaliberChange}
         >
           <option value="">All</option>
