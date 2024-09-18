@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 import { Logo } from "./header/Logo";
