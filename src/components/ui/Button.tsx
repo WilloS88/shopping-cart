@@ -10,7 +10,7 @@ export const Button = ({
   icon,
 }: ButtonProps) => {
   const baseStyles =
-    "flex px-3.5 py-3.5 font-semibold rounded focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "flex px-2.5 py-2.5 font-semibold rounded focus:outline-none focus:ring-2 focus:ring-offset-2";
 
   const variantStyles = {
     primary: "bg-slate-600 text-white hover:bg-slate-700 focus:ring-slate-500",
