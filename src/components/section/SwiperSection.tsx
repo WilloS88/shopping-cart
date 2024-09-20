@@ -3,9 +3,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import type { SwiperAboutUsProps } from "../../types/swiper/Swiper";
+import type { SwiperProps } from "../../types/swiper/Swiper";
 
-export const SwiperAboutUs = ({ images }: SwiperAboutUsProps) => {
+export const SwiperSection = ({ images }: SwiperProps) => {
   return (
     <>
       <div className="hidden lg:flex">
@@ -39,11 +39,11 @@ export const SwiperAboutUs = ({ images }: SwiperAboutUsProps) => {
             className="max-w-lg w-full"
           >
             {images.map((image, index) => (
-              <SwiperSlide key={index} className="pb-10">
+              <SwiperSlide key={index}>
                 <img
                   src={image}
                   alt={`Slide ${index}`}
-                  className="w-full h-full rounded mx-auto mb-10"
+                  className="w-full rounded mx-auto mb-10"
                 />
               </SwiperSlide>
             ))}

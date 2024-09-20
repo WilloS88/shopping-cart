@@ -15,7 +15,7 @@ export const Header = () => {
 
   return (
     <header className="bg-white">
-      <nav className=" flex max-w-screen-2xl items-center justify-between p-6 lg:px-8">
+      <nav className="flex justify-between items-center p-6 lg:px-8">
         <div className="flex items-center gap-3">
           <Logo />
           <Title />

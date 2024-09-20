@@ -1,7 +1,7 @@
 // import { useState, useEffect } from "react";
 // import { Spinner } from "../components/ui/Spinner";
 import { AnimatedGunSection } from "../components/section/AnimatedGunSection";
-import { SwiperGunSection } from "../components/section/SwiperGunSection";
+import { SwiperSection } from "../components/section/SwiperSection";
 
 import guns1 from "../assets/swiper/guns/guns1.jpg";
 import guns2 from "../assets/swiper/guns/guns2.jpg";
@@ -28,12 +28,12 @@ export const HomePage = () => {
   // }
 
   return (
-    <div className="ml-10">
+    <div className="flex-col justify-center items-center mx-4">
       <div>
         <AnimatedGunSection />
       </div>
-      <div>
-        <SwiperGunSection images={images} />
+      <div className="mb-2">
+        <SwiperSection images={images} />
       </div>
     </div>
   );

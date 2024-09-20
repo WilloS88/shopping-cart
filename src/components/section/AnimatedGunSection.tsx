@@ -5,7 +5,7 @@ const SpinningGun = () => {
   const { scene } = useGLTF("/pistol-cz.glb");
 
   return (
-    <mesh rotation={[0, 0, 0]} scale={[20, 20, 20]} position={[0, 0.8, 0]}>
+    <mesh rotation={[0, 0, 0]} scale={[20, 20, 20]} position={[0, 0.8, 1]}>
       <primitive object={scene} />
     </mesh>
   );
@@ -13,7 +13,7 @@ const SpinningGun = () => {
 
 export const AnimatedGunSection = () => {
   return (
-    <div className="flex justify-center items-center mb-20 h-[300px] w-full ">
+    <div className="flex justify-center items-center mb-20 h-[200px]">
       <Canvas>
         <OrbitControls autoRotate enableZoom={false} />
         <ambientLight intensity={1} />

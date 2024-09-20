@@ -1,4 +1,4 @@
-import { SwiperAboutUs } from "../components/section/SwiperAboutUs";
+import { SwiperSection } from "../components/section/SwiperSection";
 
 import poster1 from "../assets/swiper/posters/poster1.jpg";
 import poster2 from "../assets/swiper/posters/poster2.jpg";
@@ -10,7 +10,7 @@ const images = [poster1, poster2, poster3, poster4, poster5];
 
 export const AboutUsPage = () => {
   return (
-    <div>
+    <>
       <div className="max-w-3xl md:mx-auto mx-5 my-8 p-6 bg-gray-100 rounded-lg shadow-lg">
         <h1 className="text-3xl font-bold mb-4">About Us</h1>
         <p className="text-lg text-gray-700 mb-4">
@@ -28,9 +28,9 @@ export const AboutUsPage = () => {
           precision and the spirit of adventure.
         </p>
       </div>
-      <div className="ml-10">
-        <SwiperAboutUs images={images} />
+      <div className="mx-5">
+        <SwiperSection images={images} />
       </div>
-    </div>
+    </>
   );
 };
