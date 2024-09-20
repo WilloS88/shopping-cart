@@ -3,10 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-
-type SwiperAboutUsProps = {
-  images: string[];
-};
+import type { SwiperAboutUsProps } from "../../types/swiper/SwiperAboutUs";
 
 export const SwiperAboutUs = ({ images }: SwiperAboutUsProps) => {
   return (

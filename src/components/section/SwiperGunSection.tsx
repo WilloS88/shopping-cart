@@ -3,10 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-
-type SwiperGunSectionProps = {
-  images: string[];
-};
+import type { SwiperGunSectionProps } from "../../types/swiper/SwiperGunSection";
 
 export const SwiperGunSection = ({ images }: SwiperGunSectionProps) => {
   return (

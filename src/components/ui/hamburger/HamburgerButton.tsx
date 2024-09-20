@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
-
-type HamburgerButtonProps = {
-  toggle: () => void;
-  isOpen: boolean;
-};
+import type { HamburgerButtonProps } from "../../../types/hamburger/HamburgerButton";
 
 export const HamburgerButton = ({ toggle, isOpen }: HamburgerButtonProps) => (
   <button

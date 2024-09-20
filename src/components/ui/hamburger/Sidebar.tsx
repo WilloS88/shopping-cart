@@ -2,11 +2,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../state/store";
 import { AnimatePresence, motion } from "framer-motion";
 import { MobileMenu } from "../header/MobileMenu";
-
-type SidebarProps = {
-  isOpen: boolean;
-  onClose: () => void;
-};
+import type { SidebarProps } from "../../../types/hamburger/Sidebar";
 
 export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);

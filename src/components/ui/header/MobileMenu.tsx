@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../Button";
 import ShoppingCartIcon from "../../../assets/svg/shopping-cart-icon.svg";
-
-type MobileMenuProps = {
-  totalQuantity: number;
-  isOpen: boolean;
-  onClose: () => void;
-};
+import type { MobileMenuProps } from "../../../types/header/MobileMenu";
 
 const Links = [
   { link: "/", text: "Home" },

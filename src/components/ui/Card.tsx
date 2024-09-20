@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-
-type CardProps = {
-  children: React.ReactNode;
-};
+import type { CardProps } from "../../types/styled/Card";
 
 export const Card = ({ children }: CardProps) => {
   return (
