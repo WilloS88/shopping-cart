@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Spinner } from "../components/ui/Spinner";
 import { products as staticProducts } from "../data/products";
-import { ExpandableSearchBar } from "../components/ui/ExpandableSearchbar";
 import { ProductCard } from "../components/product/ProductCard";
 import { FilterSection } from "../components/section/FilterSection";
 import { RootState } from "../state/store";
@@ -48,8 +47,7 @@ export const ProductsPage = () => {
 
   return (
     <div className="flex-col justify-center items-center">
-      <div className="flex-col justify-center items-center">
-        <ExpandableSearchBar />
+      <div className="flex justify-center items-center">
         <FilterSection />
       </div>
       <div className="flex flex-wrap justify-center">

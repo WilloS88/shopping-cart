@@ -1,4 +1,3 @@
-// src/components/pages/CartPage.tsx
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../components/ui/Button";
 import { RootState } from "../state/store";

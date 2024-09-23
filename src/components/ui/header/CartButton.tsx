@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import ShoppingCartIcon from "../../../assets/svg/shopping-cart-icon.svg";
 
-export const CartIcon = ({ totalQuantity }: { totalQuantity: number }) => (
+export const CartButton = ({ totalQuantity }: { totalQuantity: number }) => (
   <Link to="/cart" className="relative">
     <img className="h-[25px] w-auto" src={ShoppingCartIcon} alt="Cart" />
     {totalQuantity > 0 && (
