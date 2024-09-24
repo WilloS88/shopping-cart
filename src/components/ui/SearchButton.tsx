@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSearchQuery } from "../../state/search/searchSlice";
+import type { SearchButtonProps } from "../../types/header/SearchButton";
 
-export const SearchButton = () => {
+export const SearchButton = ({ isMobile }: SearchButtonProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
@@ -45,11 +46,11 @@ export const SearchButton = () => {
       <motion.div
         initial={{ width: 0, opacity: 0 }}
         animate={{
-          width: isExpanded ? "250px" : "0px",
+          width: isExpanded ? "250px": "0px",
           opacity: isExpanded ? 1 : 0,
         }}
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
-        className={`absolute right-0 bg-white border rounded shadow ${
+        className={`absolute ${isMobile ? "left-0 right-0 mx-auto" : "right-0"} bg-white border rounded shadow ${
           isExpanded ? "block" : "hidden"
         }`}
       >

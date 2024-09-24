@@ -5,6 +5,7 @@ import { products as staticProducts } from "../data/products";
 import { ProductCard } from "../components/product/ProductCard";
 import { FilterSection } from "../components/section/FilterSection";
 import { RootState } from "../state/store";
+import { SearchButton } from "../components/ui/SearchButton";
 
 export const ProductsPage = () => {
   const [products, setProducts] = useState<typeof staticProducts | null>(null);
@@ -47,6 +48,9 @@ export const ProductsPage = () => {
 
   return (
     <div className="flex-col justify-center items-center">
+      <div className="lg:hidden">
+        <SearchButton isMobile={true} />
+      </div>
       <div className="flex justify-center items-center">
         <FilterSection />
       </div>
