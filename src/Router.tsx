@@ -6,6 +6,9 @@ import { ProductsPage } from "./pages/ProductsPage";
 import { AboutUsPage } from "./pages/AboutUsPage";
 import { SingleProductPage } from "./pages/SingleProductPage";
 import { CartPage } from "./pages/CartPage";
+import { LogInPage } from "./pages/LoginPage";
+import { SignUpPage } from "./pages/SignUpPage";
+import { AuthLayout } from "./layouts/AuthLayout";
 
 const router = createBrowserRouter([
   {
@@ -13,27 +16,22 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFoundPage />,
     children: [
-      {
-        path: "/",
-        element: <HomePage />,
-      },
-      {
-        path: "/products",
-        element: <ProductsPage />,
-      },
-      {
-        path: "/products/:id",
-        element: <SingleProductPage />,
-      },
-      {
-        path: "/aboutus",
-        element: <AboutUsPage />,
-      },
-      {
-        path: "/cart",
-        element: <CartPage />,
-      },
+      { index: true, element: <HomePage /> }, 
+      { path: "products", element: <ProductsPage /> },
+      { path: "products/:id", element: <SingleProductPage /> },
+      { path: "aboutus", element: <AboutUsPage /> },
+      { path: "cart", element: <CartPage /> },
     ],
+  },
+  {
+    path: "login",
+    element: <AuthLayout />,
+    children: [{ index: true, element: <LogInPage /> }],
+  },
+  {
+    path: "signup",
+    element: <AuthLayout />,
+    children: [{ index: true, element: <SignUpPage /> }],
   },
 ]);
 

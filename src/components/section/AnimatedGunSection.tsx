@@ -13,13 +13,15 @@ const SpinningGun = () => {
 
 export const AnimatedGunSection = () => {
   return (
-    <div className="flex justify-center items-center mb-20 h-[200px]">
-      <Canvas>
-        <OrbitControls autoRotate enableZoom={false} />
-        <ambientLight intensity={1} />
-        <directionalLight position={[20, 20, 5]} intensity={1} />
-        <SpinningGun />
-      </Canvas>
+    <div className="mb-20 flex w-full items-center justify-center">
+      <div className="flex h-[200px] w-[300px] items-center justify-center">
+        <Canvas className="h-full w-full">
+          <OrbitControls autoRotate enableZoom={false} />
+          <ambientLight intensity={1} />
+          <directionalLight position={[20, 20, 5]} intensity={1} />
+          <SpinningGun />
+        </Canvas>
+      </div>
     </div>
   );
 };

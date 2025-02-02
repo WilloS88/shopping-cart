@@ -24,7 +24,7 @@ export const SearchButton = ({ isMobile }: SearchButtonProps) => {
 
   const handleBlur = (e: React.FocusEvent<HTMLDivElement>) => {
     if (!e.currentTarget.contains(e.relatedTarget) && !searchTerm) {
-      setIsExpanded(false); // Close search bar when focus is lost
+      setIsExpanded(false);
     }
   };
 
@@ -46,7 +46,7 @@ export const SearchButton = ({ isMobile }: SearchButtonProps) => {
       <motion.div
         initial={{ width: 0, opacity: 0 }}
         animate={{
-          width: isExpanded ? "250px": "0px",
+          width: isExpanded ? "220px": "0px",
           opacity: isExpanded ? 1 : 0,
         }}
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
