@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../components/ui/Button";
 import { RootState } from "../state/store";
 import { removeFromCart, updateQuantity } from "../state/cart/cartSlice";
-
 import type { ProductItem } from "../types/Product";
+import { getPublicImageUrl } from "../supabase/getPublicImageUrl";
 
 export const CartPage = () => {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
@@ -20,7 +20,7 @@ export const CartPage = () => {
   const calculateTotalPrice = () => {
     return cartItems.reduce(
       (total: number, item: ProductItem) => total + item.price * item.quantity,
-      0
+      0,
     );
   };
 
@@ -29,8 +29,8 @@ export const CartPage = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
+    <div className="mx-auto max-w-4xl p-4">
+      <h1 className="mb-4 text-2xl font-bold">Your Cart</h1>
       {cartItems.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (
@@ -41,11 +41,11 @@ export const CartPage = () => {
               className="flex items-center justify-between border-b pb-4"
             >
               <img
-                src={item.image}
+                src={getPublicImageUrl(item.image_url || item.image)}
                 alt={item.name}
-                className="w-16 h-16 object-cover"
+                className="h-16 w-16 object-cover "
               />
-              <div className="flex-1 ml-4">
+              <div className="ml-4 flex-1">
                 <h2 className="text-lg font-semibold">{item.name}</h2>
                 <p className="text-gray-600">${item.price} each</p>
                 <div className="flex items-center">
@@ -56,11 +56,11 @@ export const CartPage = () => {
                     onChange={(e) =>
                       handleQuantityChange(item.id, parseInt(e.target.value))
                     }
-                    className="w-16 p-1 border rounded"
+                    className="w-16 rounded border p-1"
                     min="1"
                   />
                 </div>
-                <p className="text-gray-600 mt-2">
+                <p className="mt-2 text-gray-600">
                   Total: ${item.price * item.quantity}
                 </p>
               </div>

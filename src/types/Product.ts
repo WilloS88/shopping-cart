@@ -3,6 +3,7 @@ export type ProductItem = {
   name: string;
   price: number;
   image: string;
+  image_url: string;
   description: string;
   type: GunType;
   caliber: string;
